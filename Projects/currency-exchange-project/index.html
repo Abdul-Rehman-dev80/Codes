@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="/currency-exchange-project/style.css">
+</head>
+
+<body class="flex">
+    <div class="container">
+        <div class="heading">
+            <h1>Currency Converter</h1>
+        </div>
+        <div class="form">
+            <input class="value" type="number" placeholder="00">
+            <div class="flex bold" style="justify-content: space-around;">
+                <p>From</p>
+                <p>To</p>
+            </div>
+            <div class="main flex">
+                <div class="flex">
+                    <img class="countryImg1" src="https://flagsapi.com/AE/flat/48.png">
+                    <select name="Country1" class="countrySelect1">
+                    </select>
+                </div>
+                <div>
+                    <img class="exchangeArrow" src="https://cdn-icons-png.flaticon.com/512/3580/3580097.png" alt="">
+                </div>
+                <div class="flex">
+                    <img class="countryImg2" src="https://flagsapi.com/AE/flat/48.png">
+                    <select name="Country2" class="countrySelect2">
+                    </select>
+                </div>
+            </div>
+            <div>
+                <p class="result"></p>
+                <button class="submit">Get Exchange Rates</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="module" src="/currency-exchange-project/index.js"></script>
+</body>
+
+</html>

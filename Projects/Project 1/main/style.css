@@ -1,0 +1,259 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+
+.largeFont {
+  font-size: 22px;
+}
+
+.mediumFont {
+  font-size: 16px;
+}
+
+.padding {
+  padding: 0px 30px;
+}
+
+.arialFont {
+  font-family: Arial, sans-serif;
+}
+
+#navBar {
+  background-color: white;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px -3px 10px black;
+  position: fixed;
+  z-index: 1;
+}
+
+#navBar a {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 4px;
+}
+
+.burgerMenu {
+  display: none;
+  height: 100%;
+  padding: 15px;
+}
+
+.burgerMenu img {
+  height: 100%;
+}
+
+.forLinks {
+  width: 320px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* -----------------------home----------------------- */
+
+#home {
+  position: relative;
+}
+
+#home img {
+  width: 100%;
+  background-size: cover;
+}
+
+.mainHeading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.headingBg {
+  padding: 15px;
+  letter-spacing: 3px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.sideHeading {
+  font-size: 30px;
+  letter-spacing: 4px;
+  color: white;
+}
+
+/* -----------------------projects----------------------- */
+
+#projects>p {
+  padding: 70px 0px;
+}
+
+.projectCardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.projectCard {
+  position: relative;
+}
+
+.projectCard p {
+  font-size: 14px;
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+}
+
+.projectCard img {
+  width: 100%;
+  background-size: cover;
+}
+
+/* -----------------------about----------------------- */
+
+#about {
+  padding-top: 70px;
+}
+
+#about>p {
+  margin-bottom: 40px;
+}
+
+.aboutCardsContainer {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.aboutCard img {
+  width: 100%;
+  background-size: cover;
+}
+
+.cardTitle {
+  margin-top: 10px;
+}
+
+.cardTitle2 {
+  color: grey;
+  margin: 15px 0px;
+}
+
+.contactBtn {
+  width: 100%;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+/* -----------------------contact----------------------- */
+
+#contact {
+  padding-top: 70px;
+}
+
+#contact>p {
+  margin-bottom: 40px;
+}
+
+.inputFields {
+  margin: 20px 0px;
+}
+
+.inputFields input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid rgb(199, 199, 199);
+}
+
+.submitBtn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+}
+
+#contact>img {
+  width: 100%;
+  margin: 50px 0px 5px 0px;
+}
+
+/* -----------------------footer----------------------- */
+
+#footer {
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+#footer a {
+  color: white;
+}
+
+
+/* -----------------------responsive----------------------- */
+
+
+@media only screen and (max-width:599px) {
+  .burgerMenu {
+    display: inline;
+  }
+
+  .forLinks {
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    right: -130px;
+    top: 50px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .showLinksBar {
+    transform: translateX(-130px);
+    transition: transform 700ms ease;
+  }
+
+  .forLinks a {
+    padding: 8px 16px;
+  }
+
+  .sideHeading {
+    display: none;
+  }
+
+  .aboutCardsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .projectCardsContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width:600px) and (max-width:992px) {
+  .aboutCardsContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projectCardsContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}

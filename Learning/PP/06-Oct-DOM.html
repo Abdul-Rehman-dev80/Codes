@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Switcher</title>
+    <style>
+        p {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Try clicking one of the colors to change the background color of this page.</p>
+    <div class="container">
+        <span id="red" class="button"></span>
+        <span id="yellow" class="button"></span>
+        <span id="green" class="button"></span>
+        <span id="blue" class="button"></span>
+    </div>
+</body>
+
+<script>
+    let buttons = document.querySelectorAll(".button")
+    let body = document.body
+    buttons.forEach((button) => {
+        console.log(button)
+        addEventListener("click", (e) => {
+            if (e.target.id === "red") {
+                body.style.backgroundColor = e.target.id
+            }
+            if (e.target.id === "yellow") {
+                body.style.backgroundColor = e.target.id
+            }
+            if (e.target.id === "green") {
+                body.style.backgroundColor = e.target.id
+            }
+            if (e.target.id === "blue") {
+                body.style.backgroundColor = e.target.id
+            }
+            // switch (e.target.id) {
+            //     case "red":
+            //         body.style.backgroundColor = e.target.id;
+            //         break;
+            //     case "yellow":
+            //         body.style.backgroundColor = e.target.id;
+            //         break;
+            //     case "green":
+            //         body.style.backgroundColor = e.target.id;
+            //         break;
+            //     case "blue":
+            //         body.style.backgroundColor = e.target.id;
+            //         break;    
+            // }
+        })
+    })
+</script>
+
+</html>
