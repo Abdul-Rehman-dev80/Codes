@@ -9,10 +9,23 @@
 // 2724 sort by
 
 
-let sortBy = function (arr, fn) {
-    return arr.sort((a,b) => {
-        return fn(a) - fn(b)
-    })
-}
+// let sortBy = function (arr, fn) {
+//     return arr.sort((a,b) => {
+//         return fn(a) - fn(b)
+//     })
+// }
 
-sortBy([[3, 4], [5, 2], [10, 1]], (x) => x[1])
+// sortBy([[3, 4], [5, 2], [10, 1]], (x) => x[1])
+
+
+
+// 2725 interval cancellation
+
+let cancellable = function(fn, arr, t) {
+    fn(...arr)
+    let toCancel = setInterval(() => fn(...arr), t)
+    return function cancelFn() {
+        clearInterval(toCancel)
+    }
+}
+cancellable((x) => x * 2, [4], 1000)
